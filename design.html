@@ -1,527 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-    <link rel="stylesheet" href="design.css">
-    <script src="design.js"></script>
-    <title>DocMD</title>
-
-</head>
-
-<body>
-    <div class="header-section">
-        <div class="logo">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+      <link rel="stylesheet" href="design.css">
+      <script src="design.js"></script>
+      <title>DocMD</title>
+   </head>
+   <body>
+      <div class="header-section">
+         <div class="logo">
             <img src="https://www.openaccesstech.com/wp-content/uploads/2018/07/oat_logo_clean.png" alt="">
-        </div>
-        <div class="display_name">
+         </div>
+         <div class="display_name">
             <h2>
-       DocMD - Scan Explore(current)
-     </h2>
-        </div>
-    </div>
-    <div class="header-main-section">
-<div class="ui container">
-
-
-        <div class="ui grid">
+               DocMD - Scan Explore(current)
+            </h2>
+         </div>
+      </div>
+      <div class="header-main-section">
+      <div class="ui container">
+         <div class="ui grid">
             <div class="ui four wide computer sixteen wide mobile column">
-                <div id="navBarMain" class="ui blue vertical menu">
-                    <a class="item " class="btn1">
-                        Overview
-          
-                      </a>
-                    <div class="item" id="groupMenu">
-                        <b>Current Scan</b>
-                        <div class="menu ">
-                            <a class="item">Summary</a>
-                            <a class="active item">Explore 1</a>
-                            <a class="item">Remadation</a>
-                        </div>
-                    </div>
-
-                    <a class="item " class="btn1">
-              Home
-
-            </a>
-                    <a class="link item" class="btn1">
-              Browse
-            </a>
-                    <a class="item " class="btn1">
-              Help
-            </a>
-
-                </div>
+               <div id="navBarMain" class="ui blue vertical menu">
+                  <a class="item " class="btn1">
+                  Overview
+                  </a>
+                  <div class="item" id="groupMenu">
+                     <b>Current Scan</b>
+                     <div class="menu ">
+                        <a class="item">Summary</a>
+                        <a class="active item">Explore 1</a>
+                        <a class="item">Remadation</a>
+                     </div>
+                  </div>
+                  <a class="item " class="btn1">
+                  Home
+                  </a>
+                  <a class="link item" class="btn1">
+                  Browse
+                  </a>
+                  <a class="item " class="btn1">
+                  Help
+                  </a>
+               </div>
             </div>
             <div class="ui eight wide computer  sixteen wide mobile  column ">
-                <!--Breadcrums-->
-                <div id="breadcrum_sect" class="ui breadcrumb">
-                    <a class="section">Scans</a>
-                    <i class="right angle icon divider"></i>
-                    <a class="section">Current</a>
-                    <i class="right angle icon divider"></i>
-                    <div class="active section">Summary</div>
-                </div>
-                <!--Menu after breadcrums-->
-
-                <div id="menuH" class="ui blue secondary pointing menu">
-                    <a class=" item" class="menuA">
-                                    Summary
-                            </a>
-                    <a class="item active" class="menuA">
-                                    Explore
-                            </a>
-                    <a class="item" class="menuA">
-                                    Remadation
-                            </a>
-
-                </div>
-                <!-- Graph Segment-->
-
-                <div id="scan_summary" class="ui bottom attached segment">
-                    <div id="resizable">
-                        <div id="chartContainer1" style="height: 100%; width: 100%;"></div>
-                    </div>
-                </div>
-                <!--Tabular Segment-->
-                <div>
-                    <table class="ui compact celled table">
-                        <thead class="full-width active">
-                            <tr>
-
-                                <th>Category</th>
-                                <th>Count</th>
-                                <th>Errors</th>
-                                <th>Warnings</th>
-                                <th>Info</th>
-                                <th>Pass</th>
-                                <th class="four wide">Mark for Remadation</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                            <tr class="ui blue active">
-
-                                <td>Total
-                                    <td>2343</td>
-                                    <td>425</td>
-                                    <td>528</td>
-                                    <td>250</td>
-                                    <td>564</td>
-                                    <td class="collapsing center aligned">
-                                        <div class="ui toggle checkbox">
-                                            <input type="checkbox">
-                                            <label></label>
-                                        </div>
-                                    </td>
-                            </tr>
-                            <tr>
-
-                                <td>PDF
-                                    <td>2343</td>
-                                    <td>425</td>
-                                    <td>528</td>
-                                    <td>250</td>
-                                    <td>564</td>
-                                    <td class="collapsing center aligned">
-                                        <div class="ui toggle checkbox">
-                                            <input type="checkbox">
-                                            <label></label>
-                                        </div>
-                                    </td>
-                            </tr>
-                            <tr>
-
-                                <td>Word
-                                    <td>2343</td>
-                                    <td>425</td>
-                                    <td>528</td>
-                                    <td>250</td>
-                                    <td>564</td>
-                                    <td class="collapsing center aligned">
-                                        <div class="ui toggle checkbox">
-                                            <input type="checkbox">
-                                            <label></label>
-                                        </div>
-                                    </td>
-                            </tr>
-                            <tr>
-
-                                <td>Excel
-                                    <td>2343</td>
-                                    <td>425</td>
-                                    <td>528</td>
-                                    <td>250</td>
-                                    <td>564</td>
-                                    <td class="collapsing center aligned">
-                                        <div class="ui toggle checkbox">
-                                            <input type="checkbox">
-                                            <label></label>
-                                        </div>
-                                    </td>
-                            </tr>
-                            <tr>
-
-                                <td>PPT
-                                    <td>2343</td>
-                                    <td>425</td>
-                                    <td>528</td>
-                                    <td>250</td>
-                                    <td>564</td>
-                                    <td class="collapsing center aligned">
-                                        <div class="ui toggle checkbox">
-                                            <input type="checkbox">
-                                            <label></label>
-                                        </div>
-                                    </td>
-                            </tr>
-                            <tr>
-
-                                <td>Total
-                                    <td>2343</td>
-                                    <td>425</td>
-                                    <td>528</td>
-                                    <td>250</td>
-                                    <td>564</td>
-                                    <td class="collapsing center aligned">
-                                        <div class="ui toggle checkbox">
-                                            <input type="checkbox">
-                                            <label></label>
-                                        </div>
-                                    </td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-                <!--Tabular-->
-
-                <div id="table_segment2" class="full-width">
-                    <tr>
-                        <th></th>
-                        <th>
-                            <div id="table_button" class=" ui right floated small primary labeled icon button">
-                                Mark All for Remmadation
-                            </div>
-
-                        </th>
-                    </tr>
-                </div>
-
-                <!--List of files with Error Table-->
-
-                <div id="files_1">
-                    <h3>List of files with Errors</h3>
-                </div>
-
-                <div id="files_tab">
-                    <table class="ui celled table">
-                        <thead>
-                            <tr>
-                                <th>File Name</th>
-                                <th>Symbol</th>
-                                <th>Errors</th>
-                                <th>Warnings</th>
-                                <th>Info</th>
-                                <th>Pass</th>
-                                <th>Type</th>
-                                <th>Mark for Remadation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Report.pdf</td>
-
-                                <td class="negative"><i class="icon close "></i> </td>
-                                <td>5</td>
-                                <td>15</td>
-                                <td>3</td>
-                                <td>16</td>
-                                <td>PDF</td>
-                                <td class="collapsing center aligned">
-                                    <div class="ui toggle checkbox">
-                                        <input type="checkbox">
-                                        <label></label>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Summary.pdf</td>
-
-                                <td class="positive"><i class="icon checkmark "></i> </td>
-                                <td>5</td>
-                                <td>15</td>
-                                <td>3</td>
-                                <td>16</td>
-                                <td>PDF</td>
-                                <td class="collapsing center aligned">
-                                    <div class="ui toggle checkbox">
-                                        <input type="checkbox">
-                                        <label></label>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>Presentation.pptx</td>
-
-                                <td class="negative"><i class="icon close "></i> </td>
-                                <td>5</td>
-                                <td>15</td>
-                                <td>3</td>
-                                <td>16</td>
-                                <td>PPTX</td>
-                                <td class="collapsing center aligned">
-                                    <div class="ui toggle checkbox">
-                                        <input type="checkbox">
-                                        <label></label>
-                                    </div>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>-</td>
-
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-
-                            </tr>
-                            <tr>
-                                <td>-</td>
-
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-
-                            </tr>
-                            <tr>
-                                <td>-</td>
-
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-
-                <!--List of files with Errors Table-->
-
-                <div class="full-width" id="table_segment2">
-                    <tr>
-                        <th></th>
-                        <th>
-                            <div id="table_button" class="ui right floated small primary labeled icon button">
-                                <!--padding-left:15px !important;padding-right: 15px !important;-->
-                                Mark All for Remmadation
-                            </div>
-
-                        </th>
-                    </tr>
-                </div>
-
+               <!--Breadcrums-->
+               <div id="breadcrum_sect" class="ui breadcrumb">
+                  <a class="section">Scans</a>
+                  <i class="right angle icon divider"></i>
+                  <a class="section">Current</a>
+                  <i class="right angle icon divider"></i>
+                  <div class="active section">Summary</div>
+               </div>
+               <!--Menu after breadcrums-->
+               <div id="menuH" class="ui blue secondary pointing menu">
+                  <a class=" item" class="menuA">
+                  Summary
+                  </a>
+                  <a class="item active" class="menuA">
+                  Explore
+                  </a>
+                  <a class="item" class="menuA">
+                  Remadation
+                  </a>
+               </div>
+               <!-- Graph Segment-->
+               <div id="scan_summary" class="ui bottom attached segment">
+                  <div id="resizable">
+                     <div id="chartContainer1" style="height: 100%; width: 100%;"></div>
+                  </div>
+               </div>
+               <!--Tabular Segment-->
+               <div>
+                  <table class="ui compact celled table">
+                     <thead class="full-width active">
+                        <tr>
+                           <th>Category</th>
+                           <th>Count</th>
+                           <th>Errors</th>
+                           <th>Warnings</th>
+                           <th>Info</th>
+                           <th>Pass</th>
+                           <th class="four wide">Mark for Remadation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr class="ui blue active">
+                           <td>Total
+                           <td>2343</td>
+                           <td>425</td>
+                           <td>528</td>
+                           <td>250</td>
+                           <td>564</td>
+                           <td class="collapsing center aligned">
+                              <div class="ui toggle checkbox">
+                                 <input type="checkbox">
+                                 <label></label>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>PDF
+                           <td>2343</td>
+                           <td>425</td>
+                           <td>528</td>
+                           <td>250</td>
+                           <td>564</td>
+                           <td class="collapsing center aligned">
+                              <div class="ui toggle checkbox">
+                                 <input type="checkbox">
+                                 <label></label>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Word
+                           <td>2343</td>
+                           <td>425</td>
+                           <td>528</td>
+                           <td>250</td>
+                           <td>564</td>
+                           <td class="collapsing center aligned">
+                              <div class="ui toggle checkbox">
+                                 <input type="checkbox">
+                                 <label></label>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Excel
+                           <td>2343</td>
+                           <td>425</td>
+                           <td>528</td>
+                           <td>250</td>
+                           <td>564</td>
+                           <td class="collapsing center aligned">
+                              <div class="ui toggle checkbox">
+                                 <input type="checkbox">
+                                 <label></label>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>PPT
+                           <td>2343</td>
+                           <td>425</td>
+                           <td>528</td>
+                           <td>250</td>
+                           <td>564</td>
+                           <td class="collapsing center aligned">
+                              <div class="ui toggle checkbox">
+                                 <input type="checkbox">
+                                 <label></label>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Total
+                           <td>2343</td>
+                           <td>425</td>
+                           <td>528</td>
+                           <td>250</td>
+                           <td>564</td>
+                           <td class="collapsing center aligned">
+                              <div class="ui toggle checkbox">
+                                 <input type="checkbox">
+                                 <label></label>
+                              </div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <!--Tabular-->
+               <div id="table_segment2" class="full-width">
+                  <tr>
+                     <th></th>
+                     <th>
+                        <div id="table_button" class=" ui right floated small primary labeled icon button">
+                           Mark All for Remmadation
+                        </div>
+                     </th>
+                  </tr>
+               </div>
+               <!--List of files with Error Table-->
+               <div id="files_1">
+                  <h3>List of files with Errors</h3>
+               </div>
+               <div id="files_tab">
+                  <table class="ui celled table">
+                     <thead>
+                        <tr>
+                           <th>File Name</th>
+                           <th>Symbol</th>
+                           <th>Errors</th>
+                           <th>Warnings</th>
+                           <th>Info</th>
+                           <th>Pass</th>
+                           <th>Type</th>
+                           <th>Mark for Remadation</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Report.pdf</td>
+                           <td class="negative"><i class="icon close "></i> </td>
+                           <td>5</td>
+                           <td>15</td>
+                           <td>3</td>
+                           <td>16</td>
+                           <td>PDF</td>
+                           <td class="collapsing center aligned">
+                              <div class="ui toggle checkbox">
+                                 <input type="checkbox">
+                                 <label></label>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Summary.pdf</td>
+                           <td class="positive"><i class="icon checkmark "></i> </td>
+                           <td>5</td>
+                           <td>15</td>
+                           <td>3</td>
+                           <td>16</td>
+                           <td>PDF</td>
+                           <td class="collapsing center aligned">
+                              <div class="ui toggle checkbox">
+                                 <input type="checkbox">
+                                 <label></label>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Presentation.pptx</td>
+                           <td class="negative"><i class="icon close "></i> </td>
+                           <td>5</td>
+                           <td>15</td>
+                           <td>3</td>
+                           <td>16</td>
+                           <td>PPTX</td>
+                           <td class="collapsing center aligned">
+                              <div class="ui toggle checkbox">
+                                 <input type="checkbox">
+                                 <label></label>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>-</td>
+                           <td> </td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>-</td>
+                           <td> </td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td>-</td>
+                           <td> </td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <!--List of files with Errors Table-->
+               <div class="full-width" id="table_segment2">
+                  <tr>
+                     <th></th>
+                     <th>
+                        <div id="table_button" class="ui right floated small primary labeled icon button">
+                           <!--padding-left:15px !important;padding-right: 15px !important;-->
+                           Mark All for Remmadation
+                        </div>
+                     </th>
+                  </tr>
+               </div>
             </div>
-
             <div class=" ui four wide computer  sixteen wide mobile  column ">
-                <!-- Filters Section-->
-                <div id="filter_section">
-                    <h2>
-                <a class="item">
-                        <i class="filter icon"></i> Filters
-                      </a>
-                    </h2>
-
-                    <!--Document Type Labels-->
-
-                    <div class="doc-filter">
-                        <p class="blue">Document Type</p>
-
-                        <a class="ui   basic label">Pdf</a>
-                        <a class="ui  basic label">Word</a>
-                        <a class="ui  basic blue label">Ppt</a>
-                        <a class="ui  basic label">Excel</a>
-                        <a class="ui  basic label">Epub</a>
-                    </div>
-
-                    <!--Issue Level Filter-->
-
-                    <div id="issue_level_filter" class="doc-filter">
-                        <p class="blue">Issue Level</p>
-                        <a class="ui   basic label">Errors</a>
-                        <a class="ui  basic label">Warnings</a>
-                        <a class="ui  basic blue label">Info</a>
-                        <a class="ui   basic label">Pass</a>
-
-                    </div>
-
-                    <!--Issue Type-->
-                    <div class="doc-filter" id="issue_level_filter2">
-                        <p class="blue">Issue Type</p>
-                        <a class="ui   basic label">Alt Text</a>
-                        <a class="ui  basic label">Document Properties</a>
-                        <a class="ui  basic  label">Document Structure</a>
-
-                    </div>
-
-                    <!--  Scan Root -->
-                    <div id="scan_root_main">
-                        <p>Scan Root</p>
-                        <div class="scan-root">
-
-                            <div>
-                                <div id="sitemap_sect">
-                                    <a class="item">
-                                        <i class="sitemap icon"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div id="sitemap_sect_inputs">
-                                <p id="sitemap_sect_input_1" class="ui mini input">Current Root http://somesite.com</p>
-                                <div class="ui mini icon input">
-                                    <input type="text" placeholder="Search...">
-                                    <i class="inverted circular search link icon"></i>
-                                </div>
-                            </div>
+               <!-- Filters Section-->
+               <div id="filter_section">
+                  <h2>
+                     <a class="item">
+                     <i class="filter icon"></i> Filters
+                     </a>
+                  </h2>
+                  <!--Document Type Labels-->
+                  <div class="doc-filter">
+                     <p class="blue">Document Type</p>
+                     <a class="ui   basic label">Pdf</a>
+                     <a class="ui  basic label">Word</a>
+                     <a class="ui  basic blue label">Ppt</a>
+                     <a class="ui  basic label">Excel</a>
+                     <a class="ui  basic label">Epub</a>
+                  </div>
+                  <!--Issue Level Filter-->
+                  <div id="issue_level_filter" class="doc-filter">
+                     <p class="blue">Issue Level</p>
+                     <a class="ui   basic label">Errors</a>
+                     <a class="ui  basic label">Warnings</a>
+                     <a class="ui  basic blue label">Info</a>
+                     <a class="ui   basic label">Pass</a>
+                  </div>
+                  <!--Issue Type-->
+                  <div class="doc-filter" id="issue_level_filter2">
+                     <p class="blue">Issue Type</p>
+                     <a class="ui   basic label">Alt Text</a>
+                     <a class="ui  basic label">Document Properties</a>
+                     <a class="ui  basic  label">Document Structure</a>
+                  </div>
+                  <!--  Scan Root -->
+                  <div id="scan_root_main">
+                     <p>Scan Root</p>
+                     <div class="scan-root">
+                        <div>
+                           <div id="sitemap_sect">
+                              <a class="item">
+                              <i class="sitemap icon"></i>
+                              </a>
+                           </div>
                         </div>
-                    </div>
-                    <!--Date section-->
-                    <div id="date_section">
-                        <p>Date Range</p>
-                        <div class="scan-root">
-
-                            <div>
-                                <div id="date_sect_cal">
-
-                                    <a class="item">
-                                        <i class="calendar alternate icon"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div id="date_sect_cal_2">
-                                <div class="date_sec_align">
-
-                                    <div id="date_sect_cal_input" class="ui mini icon input">
-                                        <input type="text" placeholder="Start  12/11/2019">
-                                        <i class="calendar alternate outline icon"></i>
-                                    </div>
-
-                                </div>
-
-                                <div>
-
-                                    <div class="ui mini icon input">
-                                        <input type="text" placeholder="End  12/11/2019">
-                                        <i class="calendar alternate outline icon"></i>
-                                    </div>
-
-                                </div>
-                            </div>
+                        <div id="sitemap_sect_inputs">
+                           <p id="sitemap_sect_input_1" class="ui mini input">Current Root http://somesite.com</p>
+                           <div class="ui mini icon input">
+                              <input type="text" placeholder="Search...">
+                              <i class="inverted circular search link icon"></i>
+                           </div>
                         </div>
-                    </div>
-                    <!--Date Section-->
-                    <div id="department_filter_main" class="ui segment">
-                        <!--Department Section-->
-                        <div id="department_filter_1">
-                            <span>Department</span>
-                            <div class="ui action input">
-                                <select class="ui compact selection dropdown">
-                                    <option value="Select Department">Select Department</option>
-                                    <option selected="" value="Marketing">Marketing</option>
-                                    <option value="Sales">Sales</option>
-                                    <option value="Manufacture">Manufacture</option>
-                                </select>
-                            </div>
-                            <!-- Selector Section-->
+                     </div>
+                  </div>
+                  <!--Date section-->
+                  <div id="date_section">
+                     <p>Date Range</p>
+                     <div class="scan-root">
+                        <div>
+                           <div id="date_sect_cal">
+                              <a class="item">
+                              <i class="calendar alternate icon"></i>
+                              </a>
+                           </div>
                         </div>
-                        <div id="dpt_scan_root_main">
-                            <p>Traffic</p>
-                            <div id="dpt_scan-root">
-
-                                <div id="dpt_sitemap_sect">
-                                    <a class="item">
-                                        <i class="sitemap icon"></i>
-                                    </a>
-                                </div>
-
-                                <div id="dpt_sitemap_sect_inputs">
-
-                                    <div class="ui radio checkbox dpt_sitemap_sect_input_1">
-                                        <input type="radio" name="frequency" checked="checked">
-                                        <label>Once a week</label>
-                                    </div>
-                                    </br>
-
-                                    <div class="ui radio checkbox dpt_sitemap_sect_input_1">
-                                        <input type="radio" name="frequency" checked="checked">
-                                        <label>Once a week</label>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!--dpt scan root-->
+                        <div id="date_sect_cal_2">
+                           <div class="date_sec_align">
+                              <div id="date_sect_cal_input" class="ui mini icon input">
+                                 <input type="text" placeholder="Start  12/11/2019">
+                                 <i class="calendar alternate outline icon"></i>
+                              </div>
+                           </div>
+                           <div>
+                              <div class="ui mini icon input">
+                                 <input type="text" placeholder="End  12/11/2019">
+                                 <i class="calendar alternate outline icon"></i>
+                              </div>
+                           </div>
                         </div>
-                        <div id="dpt_traffic">
-                            <p>Advanced Filters(Document Properties)</p>
-                            <div id="dpt_advance" class="ui input mini">
-                                <input type="text" value="Advanced Search">
-                                <br>
-
-                            </div>
-                            <br>
-                            <label for="" style="color:grey;">(Filter by authorizing)</label>
+                     </div>
+                  </div>
+                  <!--Date Section-->
+                  <div id="department_filter_main" class="ui segment">
+                     <!--Department Section-->
+                     <div id="department_filter_1">
+                        <span>Department</span>
+                        <div class="ui action input">
+                           <select class="ui compact selection dropdown">
+                              <option value="Select Department">Select Department</option>
+                              <option selected="" value="Marketing">Marketing</option>
+                              <option value="Sales">Sales</option>
+                              <option value="Manufacture">Manufacture</option>
+                           </select>
                         </div>
-                    </div>
-                </div>
-                <!--Filter Section Inner Container-->
+                        <!-- Selector Section-->
+                     </div>
+                     <div id="dpt_scan_root_main">
+                        <p>Traffic</p>
+                        <div id="dpt_scan-root">
+                           <div id="dpt_sitemap_sect">
+                              <a class="item">
+                              <i class="sitemap icon"></i>
+                              </a>
+                           </div>
+                           <div id="dpt_sitemap_sect_inputs">
+                              <div class="ui radio checkbox dpt_sitemap_sect_input_1">
+                                 <input type="radio" name="frequency" checked="checked">
+                                 <label>Once a week</label>
+                              </div>
+                              </br>
+                              <div class="ui radio checkbox dpt_sitemap_sect_input_1">
+                                 <input type="radio" name="frequency" checked="checked">
+                                 <label>Once a week</label>
+                              </div>
+                           </div>
+                        </div>
+                        <!--dpt scan root-->
+                     </div>
+                     <div id="dpt_traffic">
+                        <p>Advanced Filters(Document Properties)</p>
+                        <div id="dpt_advance" class="ui input mini">
+                           <input type="text" value="Advanced Search">
+                           <br>
+                        </div>
+                        <br>
+                        <label for="" style="color:grey;">(Filter by authorizing)</label>
+                     </div>
+                  </div>
+               </div>
+               <!--Filter Section Inner Container-->
             </div>
             <!--Filter Section-->
-        </div>
+         </div>
       </div>
-        <div class="footer_main">
-            <hr>
-            <div class="container-fluid">
-                <div class="row">
-                    <h4 class="center-txt">2019 Open Access Technologies, Inc. All Rights Reserved.</h4>
-                    <div class="footer_color">
-                        <p> This is the explore page changing values in the 'Filters' section updates the contents of the graph, table, and file list</p>
-                        <p>Clicking on a file in the file list opens the single file view has a modal</p>
-                    </div>
-                    <h5 style="color:rgb(82, 81, 81);font-size:10px;">Please note <span class=""> the alternate views</span></h5>
-
-                    <h5 style="color:rgb(82, 81, 81);font-size:10px;"><i>Questions</i></h5>
-                    <ol class="footer_color">
-                        <li>Dow we like the send button or should it be 'Mark for EnableXpress'</li>
-                        <li>Dow we like the send button or should it be 'Mark for EnableXpress'</li>
-                    </ol>
-                </div>
+      <div class="footer_main">
+         <hr>
+         <div class="container-fluid">
+            <div class="row">
+               <h4 class="center-txt">2019 Open Access Technologies, Inc. All Rights Reserved.</h4>
+               <div class="footer_color">
+                  <p> This is the explore page changing values in the 'Filters' section updates the contents of the graph, table, and file list</p>
+                  <p>Clicking on a file in the file list opens the single file view has a modal</p>
+               </div>
+               <h5 style="color:rgb(82, 81, 81);font-size:10px;">Please note <span class=""> the alternate views</span></h5>
+               <h5 style="color:rgb(82, 81, 81);font-size:10px;"><i>Questions</i></h5>
+               <ol class="footer_color">
+                  <li>Dow we like the send button or should it be 'Mark for EnableXpress'</li>
+                  <li>Dow we like the send button or should it be 'Mark for EnableXpress'</li>
+               </ol>
             </div>
-        </div>
-        <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-</body>
-
+         </div>
+      </div>
+      <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+   </body>
 </html>
