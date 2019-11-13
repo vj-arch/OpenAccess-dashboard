@@ -1,0 +1,196 @@
+.header-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.logo {
+  float: left;
+  padding: 50px;
+  width: 20%;
+}
+.logo img {
+  margin: auto;
+}
+.display_name {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+.header-main-section {
+  width: 98%;
+  margin: auto;
+  height: 100px;
+}
+
+#navBarMain {
+  color: #00b5ad !important;
+}
+
+#groupMenu b {
+  color: #4183c4;
+}
+.scan-root {
+  display: flex;
+  align-items: center;
+}
+
+#scan_summary {
+  height: auto;
+}
+
+#table_segment {
+  height: 29vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+#table_segment2 {
+  margin-top: 5px;
+}
+
+#table_button {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+#files_1 {
+  margin-top: 40px;
+}
+
+#files_tab {
+  height: 29vh;
+  overflow: scroll;
+  margin-top: 30px;
+  overflow-x: hidden;
+}
+
+#filter_section {
+}
+
+#issue_level_filter {
+  margin-top: 10px;
+}
+
+#issue_level_filter2 {
+  margin-top: 10px;
+}
+
+#scan_root_main {
+  margin-top: 10px;
+}
+
+#sitemap_sect {
+  font-size: 40px;
+}
+
+#sitemap_sect_inputs {
+  margin-left: 15px;
+}
+
+#sitemap_sect_input_1 {
+  border: grey 1px solid;
+  font-size: 12px;
+}
+
+#date_section {
+  margin-top: 10px;
+}
+
+#date_sect_cal {
+  font-size: 40px;
+}
+
+#date_sect_cal_2 {
+  margin-left: 10px;
+}
+
+#date_sect_cal_input {
+  margin-bottom: 10px;
+}
+
+#department_filter_1 > span {
+  margin: 5px;
+}
+
+#dpt_scan_root_main {
+  margin-top: 15px;
+}
+
+#dpt_scan-root {
+  display: flex;
+  align-items: center;
+}
+
+#dpt_sitemap_sect {
+  margin-top: 8px;
+  font-size: 40px;
+}
+
+#dpt_sitemap_sect_inputs {
+  margin: 5px 10px;
+}
+
+.dpt_sitemap_sect_input_1 {
+  margin: 10px;
+}
+
+#dpt_traffic {
+  margin: 15px;
+}
+#dpt_advance {
+  margin: auto;
+  width: 70%;
+}
+.footer_main {
+  width: 100%;
+  margin: auto;
+}
+
+.center-txt {
+  text-align: center;
+}
+
+#resizable {
+  height: 300px;
+
+  position: relative;
+}
+#showChart {
+  background-color: #5bb85b;
+  color: #ffffff;
+  padding: 10px;
+  border: 0px;
+  border-radius: 8px;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+}
+#container {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  margin-top: -41px;
+}
+.canvasjs-chart-credit {
+  display: none;
+}
+canvas.canvasjs-chart-canvas {
+  border: none !important;
+}
+canvas.canvasjs-chart-container {
+  border: none !important;
+}
+
+.footer_color {
+  color: grey;
+  font-size: 8px;
+}
+
+@media (max-width: 575.98px) {
+  .header-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
