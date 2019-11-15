@@ -1,21 +1,13 @@
-.header-section {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  height: 100px;
-}
 .logo {
-  float: left;
-  padding: 50px;
-  width: 20%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
 }
 .logo img {
-  margin: auto;
+  margin-left: 50px;
 }
-.display_name {
-  width: 70%;
-  margin: auto;
-  text-align: center;
+.logo h2 {
+  margin-left: 50px;
 }
 .header-main-section {
   width: 98%;
@@ -63,9 +55,6 @@
   overflow: scroll;
   margin-top: 30px;
   overflow-x: hidden;
-}
-
-#filter_section {
 }
 
 #issue_level_filter {
@@ -189,8 +178,17 @@ canvas.canvasjs-chart-container {
 }
 
 @media (max-width: 575.98px) {
-  .header-section {
-    display: flex;
-    flex-direction: column;
+  .logo {
+    margin: 15px;
+  }
+  .logo img {
+    margin: 0;
+  }
+  .logo h2 {
+    font-size: 15px;
+  }
+  .ui.table:not(.stackable) tr > td,
+  .ui.table:not(.stackable) tr > th {
+    border: 1px solid #ddd !important;
   }
 }
